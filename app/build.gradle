@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.communityuni.demo_lancuoi_cainayne"
+        minSdkVersion 22
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation ('commons-io:commons-io:2.5')
+    implementation ('com.google.api-client:google-api-client-android:1.22.0')
+    implementation ('com.google.apis:google-api-services-speech:v1beta1-rev336-1.22.0')
+    implementation ('com.google.apis:google-api-services-language:v1beta2-rev6-1.22.0')
+    implementation ('com.google.code.findbugs:jsr305:2.0.1')
+    implementation files('libs\\google-api-services-speech-v1-rev104-1.25.0.jar')
+    implementation files('libs\\proto-google-cloud-speech-v1_1beta1-0.1.21.jar')
+    implementation files('libs\\google-api-services-texttospeech-v1-rev55-1.25.0.jar')
+    implementation files('libs\\google-cloud-texttospeech-0.117.0-beta.jar')
+
+}
